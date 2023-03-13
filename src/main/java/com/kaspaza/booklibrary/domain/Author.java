@@ -1,13 +1,11 @@
 package com.kaspaza.booklibrary.domain;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-
-import java.io.Serializable;
 import java.util.*;
 
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+
 @Entity
 public class Author {
     @Id
@@ -47,13 +45,15 @@ public class Author {
         this.lastName = lastName;
     }
 
-//    public Set<Book> getBooks() {
-//        return books;
-//    }
-//
-//    public void setBooks(Set<Book> books) {
-//        this.books = books;
-//    }
+    @JsonIgnore
+    public Set<Book> getBooks() {
+        return books;
+    }
+
+    @JsonProperty
+    public void setBooks(Set<Book> books) {
+        this.books = books;
+    }
 
     @Override
     public String toString() {

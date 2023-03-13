@@ -13,8 +13,8 @@ public class AuthorController {
 
     @Autowired
     AuthorService authorService;
-//    @Autowired
-//    BookService bookService;
+    @Autowired
+    BookService bookService;
 
     @GetMapping("/authors")
     private List<Author> getAllAuthors() {
@@ -33,7 +33,7 @@ public class AuthorController {
 
     @PostMapping("/author")
     private int saveAuthor(@RequestBody Author author) {
-//        bookService.saveOrUpdate(author.getBooks());
+        bookService.saveOrUpdate(author.getBooks());
         authorService.saveOrUpdate(author);
         return author.getID();
     }

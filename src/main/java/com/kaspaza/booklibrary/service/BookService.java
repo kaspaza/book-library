@@ -32,9 +32,9 @@ public class BookService {
     public void saveOrUpdate(Book book) {
         bookRepository.save(book);
     }
-//    public void saveOrUpdate(Set<Book> books) {
-//        bookRepository.saveAll(books);
-//    }
+    public void saveOrUpdate(Set<Book> books) {
+        bookRepository.saveAll(books);
+    }
 
     public void update(Book book, int bookID) {
         bookRepository.save(book);
