@@ -1,6 +1,7 @@
 package com.kaspaza.booklibrary.domain;
 
 import jakarta.persistence.*;
+
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -26,24 +27,28 @@ public class Book {
         return ID;
     }
 
+    public void setID(Integer ID) {
+        this.ID = ID;
+    }
+
     public String getTitle() {
         return title;
-    }
-
-    public Set<Author> getAuthors() {
-        return authors;
-    }
-
-    public String getIsbn() {
-        return isbn;
     }
 
     public void setTitle(String title) {
         this.title = title;
     }
 
+    public String getIsbn() {
+        return isbn;
+    }
+
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    public Set<Author> getAuthors() {
+        return authors;
     }
 
     public void setAuthors(Set<Author> authors) {
@@ -55,7 +60,6 @@ public class Book {
         return "Book{" +
                 "ID=" + ID +
                 ", title='" + title + '\'' +
-//                ", author=" + author +
                 ", isbn='" + isbn + '\'' +
                 '}';
     }

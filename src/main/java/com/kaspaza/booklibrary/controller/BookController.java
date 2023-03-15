@@ -1,6 +1,7 @@
 package com.kaspaza.booklibrary.controller;
 
 import com.kaspaza.booklibrary.domain.Book;
+import com.kaspaza.booklibrary.dto.BookDto;
 import com.kaspaza.booklibrary.service.AuthorService;
 import com.kaspaza.booklibrary.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class BookController {
     AuthorService authorService;
 
     @GetMapping("/books")
-    private List<Book> getAllBooks() {
+    private List<BookDto> getAllBooks() {
         return bookService.getAllBooks();
     }
 
