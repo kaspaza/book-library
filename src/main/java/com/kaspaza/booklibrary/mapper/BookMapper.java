@@ -5,7 +5,6 @@ import com.kaspaza.booklibrary.domain.Book;
 import com.kaspaza.booklibrary.dto.AuthorDto;
 import com.kaspaza.booklibrary.dto.BookDto;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
