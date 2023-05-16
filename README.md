@@ -1,7 +1,7 @@
 # book-library
 
 ### Description
-This is a CRUD type application which allows you to manage books and authors
+This is a CRUD type application which allows you to manage books and users
 on a database using an API.
 
 ### Technology used:

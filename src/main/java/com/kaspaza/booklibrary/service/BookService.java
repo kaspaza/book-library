@@ -41,7 +41,7 @@ public class BookService {
         bookRepository.saveAll(books);
     }
 
-    public void update(Book book, int bookID) {
+    public void update(Book book, int bookId) {
         bookRepository.save(book);
     }
 

@@ -3,17 +3,17 @@ package com.kaspaza.booklibrary.dto;
 import java.util.Set;
 
 public class BookDto {
-    private Integer ID;
+    private Integer id;
     private String title;
     private String isbn;
-    private Set<AuthorDto> authorsDto;
+    private Set<UserDto> authorsDto;
 
-    public Integer getID() {
-        return ID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setID(Integer ID) {
-        this.ID = ID;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -32,11 +32,11 @@ public class BookDto {
         this.isbn = isbn;
     }
 
-    public Set<AuthorDto> getAuthorsDto() {
+    public Set<UserDto> getAuthorsDto() {
         return authorsDto;
     }
 
-    public void setAuthorsDto(Set<AuthorDto> authorsDto) {
+    public void setAuthorsDto(Set<UserDto> authorsDto) {
         this.authorsDto = authorsDto;
     }
 }

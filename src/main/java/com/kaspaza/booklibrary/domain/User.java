@@ -6,28 +6,28 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-public class Author {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer ID;
+    private Integer id;
 
     private String firstName;
     private String lastName;
 
     @ManyToMany
     @JoinTable(name = "author_book",
-            joinColumns = @JoinColumn(name = "author_id"),
+            joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "book_id"))
-    private Set<Book> books = new HashSet<>();
+    private Set<Book> booksWritten = new HashSet<>();
 
-    public Author(){}
+    public User(){}
 
-    public Integer getID() {
-        return ID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setID(Integer ID) {
-        this.ID = ID;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -46,18 +46,18 @@ public class Author {
         this.lastName = lastName;
     }
 
-    public Set<Book> getBooks() {
-        return books;
+    public Set<Book> getBooksWritten() {
+        return booksWritten;
     }
 
-    public void setBooks(Set<Book> books) {
-        this.books = books;
+    public void setBooksWritten(Set<Book> books) {
+        this.booksWritten = books;
     }
 
     @Override
     public String toString() {
-        return "Author{" +
-                "ID=" + ID +
+        return "User{" +
+                "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
@@ -68,13 +68,13 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Author author = (Author) o;
+        User user = (User) o;
 
-        return Objects.equals(ID, author.ID);
+        return Objects.equals(id, user.id);
     }
 
     @Override
     public int hashCode() {
-        return ID != null ? ID.hashCode() : 0;
+        return id != null ? id.hashCode() : 0;
     }
 }
