@@ -25,6 +25,7 @@ public class BookMapper {
         bookDto.setId(book.getId());
         bookDto.setTitle(book.getTitle());
         bookDto.setIsbn(book.getIsbn());
+        bookDto.setAvailable(book.isAvailable());
         bookDto.setAuthorsDto(book.getAuthors()
                 .stream()
                 .map(this::userToDto)

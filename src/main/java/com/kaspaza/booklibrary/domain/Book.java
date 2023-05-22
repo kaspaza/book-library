@@ -13,6 +13,7 @@ public class Book {
 
     private String title;
     private String isbn;
+    private boolean available = true;
 
     @ManyToMany
     @JoinTable(name = "author_book",
@@ -46,6 +47,14 @@ public class Book {
         this.isbn = isbn;
     }
 
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
     public Set<User> getAuthors() {
         return authors;
     }
@@ -60,6 +69,8 @@ public class Book {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", isbn='" + isbn + '\'' +
+                ", avaliable=" + available +
+                ", authors=" + authors +
                 '}';
     }
 

@@ -6,6 +6,7 @@ public class BookDto {
     private Integer id;
     private String title;
     private String isbn;
+    private boolean available;
     private Set<UserDto> authorsDto;
 
     public Integer getId() {
@@ -30,6 +31,14 @@ public class BookDto {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 
     public Set<UserDto> getAuthorsDto() {

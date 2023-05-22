@@ -20,6 +20,11 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
+    @GetMapping("/booksAvailable")
+    private List<BookDto> getAvailableBooks() {
+        return bookService.getAvailableBooks();
+    }
+
     @GetMapping("/book/{bookId}")
     private Book getBook(@PathVariable("bookId") int bookId) {
         return bookService.getBookById(bookId);

@@ -46,6 +46,7 @@ public class UserMapper {
         bookDto.setId(book.getId());
         bookDto.setTitle(book.getTitle());
         bookDto.setIsbn(book.getIsbn());
+        bookDto.setAvailable(book.isAvailable());
 
         return bookDto;
     }
